@@ -8,16 +8,15 @@
 {% set authors = 'OI-wiki' %} {% if page and page.meta and page.meta.author is string %} {% set authors = page.meta.author
   %} {% endif %}
 <hr><blockquote class="page-copyright">
-  <!--<span><i class="md-icon">build</i>本页面最近更新：</span><span class="facts_modified"></span>，<a class="edit_history">更新历史</a><br>
-  <span><i class="md-icon">edit</i>发现错误？想一起完善？ <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="page_edit_url">在 GitHub 上编辑此页！</a></span><br>
-  <span><i class="md-icon">people</i>本页面贡献者：</span><span class="page_contributors">{{ authors }}</span><br>
-  <span><i class="md-icon">copyright</i>本页面的全部内容在 <strong>{{ copyright }}</strong> 协议之条款下提供，附加条款亦可能应用</span>-->
-
-  <span><i class="md-icon">build</i>Last update time of this article</span><span class="facts_modified"></span>，<a class="edit_history">Check the history</a><br>
-  <!--Note_By_Camber: 加一个 Last Translate-->
-  <span><i class="md-icon">edit</i>Found smelly bugs? Wanna contribute with us? <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="page_edit_url">Edit this Page on Github</a></span><br>
+  <span><i class="md-icon">build</i>Last update and/or translate time of this article</span><span class="facts_modified"></span>，<a class="edit_history">Check the history</a><br>
+  <!--to-do_By_Camber: 分别加一个 Last Translate和Last Update of original article-->
+  <!--可能需要Mentor, 低优先级-->
+  <span><i class="md-icon">edit</i>Found smelly bugs? Translation outdated? Wanna contribute with us? <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="page_edit_url">Edit this Page on Github</a></span><br>
   <span><i class="md-icon">people</i>Contributor of this article</span><span class="page_contributors">{{ authors }}</span><br>
-  <!--Note_By_Camber: 加一个 Translator-->
+
+  <span><i class="md-icon">translate</i>Translator of this article</span><span class="page_translators">{{ translators }}</span><i class="original_article">Visit the original article!</span></i><br>
+  <!--如上是Translators和引导至原文的模板, 需要Mentor-->
+
   <span><i class="md-icon">copyright</i>The article is available under <strong>{{ copyright }}</strong> ; additional terms may apply.</span>
   
 </blockquote>
